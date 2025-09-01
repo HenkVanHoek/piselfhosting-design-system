@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PiSelfhosting Style Guide</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts: Montserrat and Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome (Classic CDN Method) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom Styles -->
+    <style>
+        /* 1. Define Brand Colors */
+        :root {
+            --brand-green: #68A83C;
+            --brand-blue: #0F7A95;
+            --brand-gray: #6A8088; /* The color for the camera */
+            --info-blue-bg: #EFF6FF;
+
+            /* 2. Override Bootstrap's Root Variables */
+            --bs-primary: var(--brand-green);
+            --bs-primary-rgb: 104, 168, 60;
+
+            --bs-secondary: var(--brand-gray);
+            --bs-secondary-rgb: 106, 128, 136;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .swatch {
+            width: 100px;
+            height: 100px;
+            border-radius: 0.25rem;
+            display: inline-block;
+            margin: 10px;
+        }
+        .primary-color { background-color: var(--brand-green); }
+        .accent-color { background-color: var(--brand-blue); }
+        .secondary-color { background-color: var(--brand-gray); }
+        .info-color { background-color: var(--info-blue-bg); border: 1px solid #BFDBFE; }
+
+        /* 3. Create a custom class for our accent blue button */
+        .btn-accent {
+            background-color: var(--brand-blue);
+            border-color: var(--brand-blue);
+            color: #fff;
+        }
+        .btn-accent:hover {
+            background-color: #0c6178;
+            border-color: #0b586d;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="p-5">
+    <div class="container">
+        <h1>PiSelfhosting Style Guide</h1>
+        <p class="lead">A central reference for UI components based on the established application design.</p>
+        <hr class="my-4">
+
+        <!-- Logo -->
+        <h2>Logo</h2>
+        <img src="images/piselfhosting-icon192x192.png" alt="PiSelfhosting Logo" style="height: 80px;">
+        <hr class="my-4">
+
+        <!-- Color Palette -->
+        <h2>Color Palette</h2>
+        <div>
+            <div class="swatch primary-color" title="Primary Green (#68A83C)"></div>
+            <div class="swatch accent-color" title="Accent Blue (#0F7A95)"></div>
+            <div class="swatch secondary-color" title="Secondary Gray (#6A8088)"></div>
+        </div>
+        <hr class="my-4">
+
+        <!-- Components -->
+        <h2>Components</h2>
+
+        <h3>Buttons</h3>
+        <button class="btn btn-primary"><i class="fa-solid fa-arrow-right me-2"></i>Primary Action</button>
+        <button class="btn btn-accent">Accent Action</button>
+        <button class="btn btn-secondary">Secondary Action</button>
+
+        <h3>Informational Alert</h3>
+        <div class="alert" style="background-color: var(--info-blue-bg); border-color: #BFDBFE; color: var(--brand-blue);">
+            <i class="fa-solid fa-circle-info me-2"></i>
+            This is an informational message, matching the style of the original UI.
+        </div>
+
+        <h3>Component Selection Card</h3>
+        <div class="card mt-3" style="width: 400px;">
+            <div class="card-body">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="componentCheck" checked>
+                  <label class="form-check-label fw-bold" for="componentCheck">
+                    Portainer <span class="badge bg-primary ms-1">UI</span>
+                  </label>
+                </div>
+                <p class="card-text text-muted small mt-2">A powerful management UI for Docker environments.</p>
+                <a href="#" class="card-link small">Project Link</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
